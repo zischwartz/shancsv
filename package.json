@@ -1,0 +1,11 @@
+{
+  "name": "shancsv",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "jupyter": "docker run -it --rm -v $PWD:/home/jovyan/work --rm -p 8888:8888 jupyter/datascience-notebook start-notebook.sh --NotebookApp.token=''",
+    "nbconvert": "docker run -it --rm -v $PWD:/home/jovyan/work --rm jupyter/datascience-notebook jupyter nbconvert --to python work/somescript.ipynb",
+    "jupyter-debug": "docker run -it --rm -v $PWD:/home/jovyan/work --rm -p 8888:8888 jupyter/datascience-notebook bash"
+  }
+}
